@@ -10,12 +10,21 @@
        url('__MM.woff') format('woff');
 }
 
+// For Mobile
+@font-face {
+  font-family: '__MM';
+  src: url('__MM.woff2') format('woff2'),
+       url('__MM.woff') format('woff');
+}
+
+// Menu Items - Could Change
 @font-face {
   font-family: '__CM';
   src: url('__CM.woff2') format('woff2'),
        url('__CM.woff') format('woff');
 }
 
+// Content Text - Could Definitely Change
 @font-face {
   font-family: '__CB';
   src: url('__CB.woff2') format('woff2'),
