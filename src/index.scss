@@ -1,0 +1,21 @@
+@import './_shared.scss';
+
+:root {
+  --tan-2: 0.034920769491748;
+  --height-addition: calc(var(--tan-2) * 100vw / 2);
+  
+  --header-height-rect: 170px; // 210, 170, 160, 130
+  --header-width-addition: calc(var(--tan-2) * var(--header-height-rect));
+  --header-height-calc: calc(var(--header-height-rect) + var(--height-addition));
+  
+  --menu-height: calc(100vh - var(--header-height-rect));
+  --menu-width-addition: calc(var(--tan-2) * var(--menu-height));
+}
+
+body {
+  margin: 0;
+  background-color: $black;
+  color: $white;
+  // font family
+  position: relative;
+}
