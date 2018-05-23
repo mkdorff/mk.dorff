@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import Seed from './assets/seed'
+import './fonts/fonts.css'
 import './index.css'
 
 // import components
