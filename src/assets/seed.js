@@ -49,6 +49,13 @@ export default [
     invertBackground: false
   },
   {
+    shortName: 'Sahara',
+    longName: 'Sahara Dev',
+    images: [],
+    description: 'There was this place I worked for that went bankrupt',
+    invertBackground: false
+  },
+  {
     shortName: 'Mapover',
     longName: 'Mapover',
     images: [],
@@ -59,12 +66,6 @@ export default [
   {
     shortName: 'Windo',
     longName: 'Windo App',
-    images: [],
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    invertBackground: false
-  },
-  {
-    longName: 'Sudoku',
     images: [],
     description: 'And here is where we go ham with the text. Ham ham ham',
     invertBackground: false
@@ -88,9 +89,16 @@ export default [
     images: [],
     description: 'And here is where we go ham with the text. Ham ham ham',
     invertBackground: false
-  },{
+  },
+  {
     shortName: 'RSA',
     longName: 'RSA in JS & E-LISP',
+    images: [],
+    description: 'And here is where we go ham with the text. Ham ham ham',
+    invertBackground: false
+  },
+  {
+    longName: 'Sudoku',
     images: [],
     description: 'And here is where we go ham with the text. Ham ham ham',
     invertBackground: false
