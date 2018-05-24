@@ -1,0 +1,11 @@
+@import '../../_shared.scss';
+
+.content {
+  position: absolute;
+  width: 100%;
+  margin-top: var(--header-height-calc);
+  z-index: 1;
+  
+/*   height: 80px;
+  background: lavender; */
+}

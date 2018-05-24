@@ -1,0 +1,20 @@
+@import '../../_shared.scss';
+
+.header {
+  height: var(--header-height-calc);
+  margin-top: calc(-1*var(--height-addition));
+  width: calc(100vw + var(--header-width-addition));
+  background: white;
+  transform-origin: center bottom;
+  transform: rotate(-2deg);
+  
+  // Will change -- abstract
+  transition: height 0.3s ease;
+  color: $black;
+}
+
+.temp-title {
+  font-size: 60px;
+  padding: 80px 0 0 60px;
+  font-family: '__MB', sans-serif;
+}

@@ -4,7 +4,8 @@
   --tan-2: 0.034920769491748;
   --height-addition: calc(var(--tan-2) * 100vw / 2);
   
-  --header-height-rect: 170px; // 210, 170, 160, 130
+  --header-height-rect: 160px; // 210, 170, 160, 130
+  @include for-desktop { --header-height-rect: 170px; }
   --header-width-addition: calc(var(--tan-2) * var(--header-height-rect));
   --header-height-calc: calc(var(--header-height-rect) + var(--height-addition));
   
@@ -16,8 +17,15 @@ body {
   margin: 0;
   background-color: $black;
   color: $white;
-  font-family: '__CB', sans-serif;
-  // font-size
+  @include __CB;
   position: relative;
 }
 
+.header-menu {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  min-height: var(--header-height-calc);
+  max-height: 100vh;
+  z-index: 2;
+}

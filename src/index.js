@@ -6,10 +6,9 @@ import Seed from './assets/seed'
 import './fonts/fonts.css'
 import './index.css'
 
-// import components
-import HeaderMenu from './components/HeaderMenu'
-import MainContent from './components/MainContent'
-
+import Header from './components/Header'
+import Menu from './components/Menu'
+import Content from './components/Content'
 
 class App extends Component {
   constructor(props) {
@@ -24,18 +23,16 @@ class App extends Component {
     this.setState({
       active: decodeURIComponent(qs.parse(window.location.hash).active || '')
     });
-  
-    //
-    console.log(qs.stringify({active:'tetris'}))
-    // can simply set hash with location.hash = '#{abovething}'
-    //
   }
 
   render() {
     return (
       <React.Fragment>
-        <HeaderMenu seed={Seed} active={this.state.active}/>
-        <MainContent seed={Seed} active={this.state.active}/>
+        <div className='header-menu'>
+          <Header active={this.state.active}/>
+          <Menu seed={Seed} active={this.state.active}/>
+        </div>
+        <Content seed={Seed} active={this.state.active}/>
       </React.Fragment>
     )
   }
