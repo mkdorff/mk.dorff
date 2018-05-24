@@ -6,7 +6,7 @@
   margin-left: calc(-1*var(--menu-width-addition));
   background: black;
   transform-origin: center top;
-  transform: rotate(-2deg);
+  @include tilt;
   
   // Will change -- abstract
   transition: height 0.3s ease;

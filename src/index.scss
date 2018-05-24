@@ -4,7 +4,7 @@
   --tan-2: 0.034920769491748;
   --height-addition: calc(var(--tan-2) * 100vw / 2);
   
-  --header-height-rect: 160px; // 210, 170, 160, 130
+  --header-height-rect: 160px;
   @include for-desktop { --header-height-rect: 170px; }
   --header-width-addition: calc(var(--tan-2) * var(--header-height-rect));
   --header-height-calc: calc(var(--header-height-rect) + var(--height-addition));

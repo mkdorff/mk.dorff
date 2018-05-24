@@ -1,6 +1,8 @@
-// Colors
+//// Colors
 $black:    #000000;
 $white:    #FFFFFF;
+
+//// Mixins
 
 // Fonts
 @mixin __MB {
@@ -9,6 +11,10 @@ $white:    #FFFFFF;
 
 @mixin __MM {
   font-family: '__MM', sans-serif;
+}
+
+@mixin __ML {
+  font-family: '__ML', sans-serif;
 }
 
 @mixin __CM {
@@ -20,6 +26,27 @@ $white:    #FFFFFF;
 }
 
 // Responsive
+@mixin for-mobile {
+  @media (max-width: 999px) { @content; }
+}
 @mixin for-desktop {
   @media (min-width: 1000px) { @content; }
+}
+
+// Transforms
+@mixin tilt {
+  transform: rotate(-2deg);
+}
+
+@mixin untilt {
+  transform: rotate(2deg);
+}
+
+// Transitions
+@mixin simple-ease($property...) {
+  $val: ();
+  @each $p in $property {
+    $val: append($val, ($p 0.2s ease), comma)
+  }
+  transition: $val;
 }

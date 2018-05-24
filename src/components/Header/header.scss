@@ -4,17 +4,61 @@
   height: var(--header-height-calc);
   margin-top: calc(-1*var(--height-addition));
   width: calc(100vw + var(--header-width-addition));
-  background: white;
-  transform-origin: center bottom;
-  transform: rotate(-2deg);
-  
-  // Will change -- abstract
-  transition: height 0.3s ease;
+  @include __MB;
   color: $black;
-}
+  background: $white;
+  justify-content: space-between;
+  transform-origin: center bottom;
+  @include tilt;
 
-.temp-title {
-  font-size: 60px;
-  padding: 80px 0 0 60px;
-  font-family: '__MB', sans-serif;
+  .title {
+    position: absolute;
+    font-size: 72px;
+    
+    @include for-mobile { @include untilt; }
+    @include simple-ease(bottom, left);
+    @include for-mobile { bottom: 38px; left: 32px; }
+    @include for-desktop { bottom: 16px; left: 48px; }
+
+    .hi {
+      @include simple-ease(font-size);
+      @include for-mobile { font-size: 54px; }
+      @include for-desktop { display: inline; }
+    }
+
+    .im {
+      padding-left: 16px;
+      @include simple-ease(font-size);
+      @include for-desktop { display: inline; }
+      @include for-mobile { 
+        @include __ML;
+        font-size: 24px;
+        padding-left: 4px;
+      }
+    }
+
+    &.hide {
+      bottom: var(--header-height-calc);
+    }
+  }
+
+  .active-title {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 72px;
+    bottom: -120px;
+    left: 48px;
+    @include simple-ease(bottom, left);
+    @include for-mobile { 
+      @include untilt; 
+      font-size: 54px;
+      left: 32px;
+      bottom: -100px;
+    }
+
+    &.show {
+      @include for-mobile { bottom: 38px; }
+      @include for-desktop { bottom: 16px; }
+    }
+  }
 }

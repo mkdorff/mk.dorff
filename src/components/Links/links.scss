@@ -1,0 +1,9 @@
+@import '../../_shared.scss';
+
+.links {
+  @include untilt;
+  position: fixed;
+  top: 0;
+  right: 0;
+  // margin-top: calc(var(--height-addition));
+}
