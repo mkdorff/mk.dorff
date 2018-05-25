@@ -16,19 +16,19 @@
     font-size: 72px;
     
     @include for-mobile { @include untilt; }
-    @include simple-ease(bottom, left);
+    @include simple-ease-med(bottom, left);
     @include for-mobile { bottom: 38px; left: 32px; }
     @include for-desktop { bottom: 16px; left: 48px; }
 
     .hi {
-      @include simple-ease(font-size);
+      @include simple-ease-fast(font-size);
       @include for-mobile { font-size: 54px; }
       @include for-desktop { display: inline; }
     }
 
     .im {
       padding-left: 16px;
-      @include simple-ease(font-size);
+      @include simple-ease-fast(font-size);
       @include for-desktop { display: inline; }
       @include for-mobile { 
         @include __ML;
@@ -48,7 +48,7 @@
     font-size: 72px;
     bottom: -120px;
     left: 48px;
-    @include simple-ease(bottom, left);
+    @include simple-ease-med(bottom, left);
     @include for-mobile { 
       @include untilt; 
       font-size: 54px;

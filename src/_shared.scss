@@ -1,6 +1,7 @@
 //// Colors
-$black:    #000000;
-$white:    #FFFFFF;
+$black:     #000000;
+$dark-grey: #1B1B1B;
+$white:     #FFFFFF;
 
 //// Mixins
 
@@ -43,10 +44,18 @@ $white:    #FFFFFF;
 }
 
 // Transitions
-@mixin simple-ease($property...) {
+@mixin simple-ease-fast($property...) {
   $val: ();
   @each $p in $property {
     $val: append($val, ($p 0.2s ease), comma)
+  }
+  transition: $val;
+}
+
+@mixin simple-ease-med($property...) {
+  $val: ();
+  @each $p in $property {
+    $val: append($val, ($p 0.3s ease), comma)
   }
   transition: $val;
 }
