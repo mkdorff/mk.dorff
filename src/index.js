@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import qs from 'query-string'
 import registerServiceWorker from './registerServiceWorker'
+import { isMobile } from './helpers/deviceView'
 import Seed from './assets/seed'
 import './fonts/fonts.css'
 import './index.css'
@@ -23,15 +24,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const item = decodeURIComponent(qs.parse(window.location.hash).active || '');
+    const itemParam = decodeURIComponent(qs.parse(window.location.hash).active || '');
+    const active = Seed.filter(item => item.longName === itemParam)[0];
     this.setState({
-      active: item,
-      showMenu: !item
+      active: active,
+      showMenu: !active
     });
   }
 
   componentDidUpdate() {
-    window.location.hash = this.state.active ? `#active=${this.state.active}` : '';
+    window.location.hash = this.state.active ? `#active=${this.state.active.longName}` : '';
   }
 
   _setActive = (item) => {
@@ -54,10 +56,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className='header-menu'>
-          <Header active={active} menuClosed={!showMenu}/>
+          <Header active={active && active.shortName} menuClosed={!showMenu}/>
           <Menu seed={Seed} showMenu={showMenu} onItemClick={this._setActive}/>
         </div>
-        <Content seed={Seed} active={active} onClick={this._resetActive}/>
+        <Content seed={Seed} active={true} onClick={this._resetActive}/>
       </React.Fragment>
     )
   }

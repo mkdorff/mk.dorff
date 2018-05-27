@@ -24,7 +24,8 @@ export default class Menu extends Component {
   }
 
   _handleClick = (e) => {
-    this.props.onItemClick(e.target.id);
+    const newActive = this.props.seed.filter(item => item.longName === e.target.id);
+    newActive.length && this.props.onItemClick(newActive[0]);
   }
 
   render() {
@@ -40,7 +41,7 @@ export default class Menu extends Component {
             id={item.longName}
             key={idx}>
             <div className='item-text' id={item.longName}>
-              {(isMobile && item.shortName) || item.longName}
+              {isMobile ? item.shortName : item.longName}
             </div>
           </div>
         ))}

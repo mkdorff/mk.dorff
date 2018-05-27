@@ -57,6 +57,7 @@ export default [
     ]
   },
   {
+    shortName: 'Tetris',
     longName: 'Tetris',
     sourceCode: 'https://github.com/mkdorff/c-tetris',
     description: [
@@ -93,6 +94,7 @@ export default [
     images: []
   },
   {
+    shortName: 'Mapover',
     longName: 'Mapover',
     homepage: 'https://www.npmjs.com/package/mapover',
     sourceCode: 'https://github.com/mkdorff/mapover-js',
@@ -119,6 +121,7 @@ export default [
     images: [],
   },
   {
+    shortName: 'Asteroids',
     longName: 'Asteroids',
     sourceCode: 'https://github.com/mkdorff/Asteroids',
     description: 'And here is where we go ham with the text. Ham ham ham',
@@ -137,6 +140,7 @@ export default [
     description: 'ALSO: Look here: https://github.com/mkdorff/CS237/blob/master/wellness.org'
   },
   {
+    shortName: 'Sudoku',
     longName: 'Sudoku',
     sourceCode: 'https://github.com/mkdorff/Sudoku-Solver',
     description: 'And here is where we go ham with the text. Ham ham ham'
@@ -148,6 +152,7 @@ export default [
     description: 'And here is where we go ham with the text. Ham ham ham'
   },
   {
+    shortName: 'Spotify',
     longName: 'Spotify',
     homepage: 'https://open.spotify.com/user/mohonrid',
     description: 'And here is where we go ham with the text. Ham ham ham',
