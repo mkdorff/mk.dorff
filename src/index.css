@@ -19,8 +19,11 @@ body {
 
 .header-menu {
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
   min-height: var(--header-height-calc);
   max-height: 100vh;
   z-index: 2; }
+  @media (min-width: 1000px) {
+    .header-menu {
+      overflow-y: hidden; } }

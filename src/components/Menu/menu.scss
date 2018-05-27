@@ -1,47 +1,70 @@
 @import '../../_shared.scss';
 
 .menu {
-  height: calc(var(--menu-height) + var(--height-addition));
-  width: calc(100vw + var(--menu-width-addition));
-  margin-left: calc(-1*var(--menu-width-addition));
-  background: $black;
-  transform-origin: center top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include tilt;
-  @include simple-ease-med(height);
+  width: 100vw;
+  background: transparent;
+
+  @include for-mobile {
+    overflow: scroll;
+    height: calc(100vh - var(--header-height-calc) + var(--height-addition));
+  }
+
+  @include for-desktop {
+    height: calc(var(--menu-height) + var(--height-addition));
+    width: calc(100vw + var(--menu-width-addition));
+    margin-left: calc(-1*var(--menu-width-addition));
+    transform-origin: center top;
+    @include tilt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s cubic-bezier(.82,.01,.63,-0.13), height 0.5s cubic-bezier(.5,1.16,.16,.98);
+  }
   
   .menu-item {
-    min-width: 100vw;
-    white-space: nowrap;
     text-transform: uppercase;
-    text-overflow: clip;
-    text-align: center;
-    overflow: hidden;
     cursor: pointer;
-    @include __CM;
     color: $white;
-    opacity: 0.4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    @include simple-ease-fast(opacity, font-size, background-color);
+    @include __CM;
 
-    .item-text { font-size: 250px; }    
+    @include for-mobile {
+      margin: 25px 0 25px 34px;
+      font-size: 37px;
+    }
+    
+    @include for-desktop {
+      min-width: 105vw;
+      white-space: nowrap;
+      text-overflow: clip;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0.4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      @include simple-ease-fast(opacity, background-color);
+    }
+    
+    .item-text { 
+      @include for-desktop { font-size: 250px; }    
+    }
     
     &:hover {
-      background-color: $dark-grey;
-      opacity: 1;
-      min-height: 96px;
-      padding-bottom: 4px;
-    
-      .item-text { font-size: 130px; }
+      @include for-desktop {
+        background-color: $dark-grey;
+        opacity: 1;
+        min-height: 97px;
+        padding-bottom: 3px;
+      
+        .item-text { font-size: 130px; }
+      }
     }
   }
 }
 
 .hide-menu {
-  height: 0px !important;
+  transition: opacity 0.4s ease, height 0.8s cubic-bezier(.82,.04,.54,-0.13);
+  height: 0 !important;
+  opacity: 0 !important;
 }

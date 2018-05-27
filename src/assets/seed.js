@@ -65,8 +65,8 @@ export default [
     images: []
   },
   {
-    shortName: 'E.T. Submarine',
-    longName: 'Ethernet Tethered Submarine',
+    shortName: 'Submarine',
+    longName: 'E.T. Submarine',
     sourceCode: 'https://github.com/mkdorff/Ethernet-Tethered-Submarine',
     description: 'And here is where we go ham with the text. Ham ham ham',
     images: []
@@ -86,6 +86,7 @@ export default [
     images: []
   },
   {
+    shortName: 'FS',
     longName: 'FamilySearch',
     homepage: 'https://www.familysearch.org/',
     description: 'I work here right now',
@@ -98,10 +99,17 @@ export default [
     description: 'And here is where we go ham with the text. Ham ham ham'
   },
   {
-    longName: 'Hippo',
+    shortName: 'Hippo',
+    longName: 'Hippo Hippo',
     sourceCode: 'https://github.com/mkdorff/Hippo',
     description: 'And here is where we go ham with the text. Ham ham ham',
     images: []
+  },
+  {
+    shortName: 'ML',
+    longName: 'Machine Learning Algorithms',
+    sourceCode: 'https://github.com/mkdorff/CS450',
+    description: 'And here is where we go ham with the text. Ham ham ham'
   },
   {
     shortName: 'Windo',
@@ -115,12 +123,6 @@ export default [
     sourceCode: 'https://github.com/mkdorff/Asteroids',
     description: 'And here is where we go ham with the text. Ham ham ham',
     images: []
-  },
-  {
-    shortName: 'ML',
-    longName: 'Machine Learning Algorithms',
-    sourceCode: 'https://github.com/mkdorff/CS450',
-    description: 'And here is where we go ham with the text. Ham ham ham'
   },
   {
     shortName: 'Physics',

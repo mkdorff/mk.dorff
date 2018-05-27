@@ -2,7 +2,6 @@ import React from 'react'
 import './header.css'
 
 export default function Header({active, menuClosed}) {
-
   return (
     <div className='header'>
       <div className={`title ${menuClosed ? 'hide' : ''}`}>

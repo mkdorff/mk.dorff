@@ -23,7 +23,8 @@ body {
 
 .header-menu {
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
+  @include for-desktop { overflow-y: hidden; }
   width: 100vw;
   min-height: var(--header-height-calc);
   max-height: 100vh;

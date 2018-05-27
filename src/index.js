@@ -34,15 +34,15 @@ class App extends Component {
     window.location.hash = this.state.active ? `#active=${this.state.active}` : '';
   }
 
-  setActive = (item) => {
+  _setActive = (item) => {
     this.setState({
       active: item,
       showMenu: false
     });
   }
 
-  resetActive = () => {
-    this.setState({showMenu: true}, () => {
+  _resetActive = () => {
+  this.setState({showMenu: true}, () => {
       setTimeout(() => {
         this.setState({active: ''});
       }, 100);
@@ -55,9 +55,9 @@ class App extends Component {
       <React.Fragment>
         <div className='header-menu'>
           <Header active={active} menuClosed={!showMenu}/>
-          <Menu seed={Seed} showMenu={showMenu} onItemClick={this.setActive}/>
+          <Menu seed={Seed} showMenu={showMenu} onItemClick={this._setActive}/>
         </div>
-        <Content seed={Seed} active={active}/>
+        <Content seed={Seed} active={active} onClick={this._resetActive}/>
       </React.Fragment>
     )
   }
