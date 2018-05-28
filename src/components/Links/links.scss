@@ -1,9 +1,80 @@
 @import '../../_shared.scss';
 
 .links {
-  @include untilt;
+  position: fixed;
+  z-index: 4;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  @include for-mobile { top: 20px; width: 100vw; }
+  @include for-desktop { top: 23px; right: 27px; }
+
+  .left {
+    display: flex;
+    @include for-desktop {
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 13px;
+    }
+
+    &.show-links { opacity: 1; }
+    @include for-mobile {
+      opacity: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      @include simple-ease-med(opacity);
+    }
+
+    .link {
+      @include simple-ease-fast(opacity);      
+      @include for-mobile {
+        font-size: 24px;
+        margin: 5px 0 10px 35px;
+      }
+
+      @include for-desktop {
+        font-size: 18px;
+        margin: 0 11px;
+        cursor: pointer;
+      }
+
+      &:hover { opacity: 0.5; }
+      a { text-decoration: none; color: $black; }
+    }
+  }
+
+  .right {
+    .mobile-toggle {
+      @include for-desktop{ display: none; }
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      
+      img { width: 100%; }
+    } 
+    
+    .logo-wrapper {
+      @include for-mobile{ display: none; }
+      width: 62px;
+      height: 62px;
+      cursor: pointer;
+      @include simple-ease-fast(opacity);
+      
+      &:hover { opacity: 0.5; }
+      img { width: 100%; }
+    }
+  }
+}
+
+.backdrop {
   position: fixed;
   top: 0;
-  right: 0;
-  // margin-top: calc(var(--height-addition));
+  height: var(--header-height-calc);
+  margin-top: calc(-1*var(--height-addition));
+  width: calc(100vw + var(--header-width-addition));
+  transform-origin: center bottom;
+  z-index: 3;
+  @include tilt;
+  @include simple-ease-med(background-color);
+  &.hide-behind { background-color: $white; }
 }

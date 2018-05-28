@@ -34,7 +34,7 @@ export default class Menu extends Component {
 
     return (
       <div className={`menu ${showMenu ? '' : 'hide-menu'}`}>
-        {seed.map((item, idx) => (
+        {seed.map((item, idx) => (!item.hideFromMenu &&
           <div 
             className='menu-item'
             onClick={this._handleClick}

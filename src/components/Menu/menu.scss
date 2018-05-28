@@ -61,10 +61,10 @@
       }
     }
   }
-}
 
-.hide-menu {
-  transition: opacity 0.4s ease, height 0.8s cubic-bezier(.82,.04,.54,-0.13);
-  height: 0 !important;
-  opacity: 0 !important;
+  &.hide-menu {
+    transition: opacity 0.4s ease, height 0.8s cubic-bezier(.82,.04,.54,-0.13);
+    height: 0 !important;
+    opacity: 0 !important;
+  }
 }

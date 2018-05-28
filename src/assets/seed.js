@@ -9,6 +9,13 @@ import WNERL_InfoOverlay from './W.NERL/InfoOverlay.png'
 // on mobile: images first, then description. Simple
 export default [
   {
+    shortName: 'About',
+    longName: 'About',
+    description: '',
+    images: [],
+    hideFromMenu: true
+  },
+  {
     shortName: 'W.NERL',
     longName: 'Wikipedia\'s NERL',
     sourceCode: 'https://github.com/mkdorff/NERL_CS450',

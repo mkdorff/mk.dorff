@@ -4,7 +4,7 @@ import './content.css'
 export default function Content(props) {
 
   return (
-    <div className='content' onClick={props.onClick}>
+    <div className='content'>
       
     </div>
   )

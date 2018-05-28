@@ -59,7 +59,13 @@ class App extends Component {
           <Header active={active && active.shortName} menuClosed={!showMenu}/>
           <Menu seed={Seed} showMenu={showMenu} onItemClick={this._setActive}/>
         </div>
-        <Content seed={Seed} active={true} onClick={this._resetActive}/>
+        <Links 
+          showMenuButton={!showMenu} 
+          menuClick={this._resetActive} 
+          aboutClick={this._setActive}
+          seed={Seed}
+          />
+        <Content seed={Seed} active={true}/>
       </React.Fragment>
     )
   }
