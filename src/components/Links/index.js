@@ -28,7 +28,7 @@ export default class Links extends Component {
   }
 
   render() {
-    const {showMenuButton, menuClick, aboutClick, seed} = this.props;
+    const {showMenuButton, menuClick} = this.props;
     const {menuOpen} = this.state;
 
     return (
