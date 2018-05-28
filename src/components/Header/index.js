@@ -6,7 +6,7 @@ export default function Header({active, menuClosed}) {
     <div className='header'>
       <div className={`title ${menuClosed ? 'hide' : ''}`}>
         <div className='hi'>Hi,</div>
-        <div className='im'>I’m Mohonri</div>
+        <div className='im'>I’m Mohonri Kachiki</div>
       </div>
       <div className={`active-title ${menuClosed ? 'show' : ''}`}>
         {active}

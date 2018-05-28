@@ -15,6 +15,15 @@ export default class Links extends Component {
     }
   }
 
+  static getDerivedStateFromProps(props, state) {
+    return props.showMenuButton ? {menuOpen:false} : null;
+  }
+
+  _handleMenuClick = () => {
+    this.setState({menuOpen: false});
+    this.props.menuClick();
+  }
+
   _handleAboutClick = () => {
     this.props.aboutClick(this.props.seed.filter(item => item.longName === "About")[0]);
   }
@@ -28,7 +37,7 @@ export default class Links extends Component {
   }
 
   render() {
-    const {showMenuButton, menuClick} = this.props;
+    const {showMenuButton} = this.props;
     const {menuOpen} = this.state;
 
     return (
@@ -36,7 +45,7 @@ export default class Links extends Component {
         <div className={`backdrop ${menuOpen ? 'hide-behind' : ''}`}></div>
         <div className='links'>
           <div className={`left ${menuOpen ? 'show-links' : ''}`}>
-            {showMenuButton && <div className='link' onClick={menuClick}>menu</div>}
+            {showMenuButton && <div className='link' onClick={this._handleMenuClick}>menu</div>}
             <div className='link' onClick={this._handleAboutClick}>about</div>
             <div className='link'>
               <a href={Resume} target='_blank'>resume</a>
@@ -50,7 +59,7 @@ export default class Links extends Component {
                 <img src={Menu} alt='menu open' onClick={this._openMenu}/>
               }
             </div>
-            <div className='logo-wrapper' onClick={menuClick}>
+            <div className='logo-wrapper' onClick={this._handleMenuClick}>
               <img src={Logo} alt='Logo'/>
             </div>
           </div>
