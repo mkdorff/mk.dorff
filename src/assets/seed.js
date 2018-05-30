@@ -20,6 +20,10 @@ export default [
     longName: 'Wikipedia\'s NERL',
     sourceCode: 'https://github.com/mkdorff/NERL_CS450',
     description: [
+      {
+        type: 'h3',
+        body: 'HI GUYS'
+      },
       'I fondly call this project NERL, because it\'s fun to say and because it stands for Wikipedia\'s Never Ending Reading List. The idea is simple. Any ecommerce site, Amazon for example, have suggestions that litter the side of the site, based off what you have viewed and purchased. It\'s creepy. So why not give that to Wikipedia?',
       'Seriously though, this project suggests other related Wikipedia articles you should read based of the current article you are on. I did this by analyzing all the links between pages in all of Wikipedia.',
       ''

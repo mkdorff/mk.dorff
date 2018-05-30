@@ -1,16 +1,16 @@
 @import './_shared.scss';
 
 :root {
-  --tan-2: 0.034920769491748;
-  --height-addition: calc(var(--tan-2) * 100vw / 2);
+  // tan(2) = 0.034920769491748 - I can't even rn. ugh
+  --height-addition: calc(0.034920769491748 * 100vw / 2);
   
   --header-height-rect: 160px;
   @include for-desktop { --header-height-rect: 170px; }
-  --header-width-addition: calc(var(--tan-2) * var(--header-height-rect));
+  --header-width-addition: calc(0.034920769491748 * var(--header-height-rect));
   --header-height-calc: calc(var(--header-height-rect) + var(--height-addition));
   
   --menu-height: calc(100vh - var(--header-height-rect));
-  --menu-width-addition: calc(var(--tan-2) * var(--menu-height));
+  --menu-width-addition: calc(0.034920769491748 * var(--menu-height));
 }
 
 body {
