@@ -1,9 +1,4 @@
-import WNERL_DataSample from './W.NERL/DataSample.png'
-import WNERL_MostOutgoing from './W.NERL/MostOutgoing.png'
-import WNERL_MostIncoming from './W.NERL/MostIncoming.png'
-import WNERL_Landing from './W.NERL/Landing.png'
-import WNERL_ActiveNode from './W.NERL/ActiveNode.png'
-import WNERL_InfoOverlay from './W.NERL/InfoOverlay.png'
+import WNERL from './W.NERL'
 
 // NOTE: so maybe just have images on the left, description on the right
 // on mobile: images first, then description. Simple
@@ -15,58 +10,7 @@ export default [
     images: [],
     hideFromMenu: true
   },
-  {
-    shortName: 'W.NERL',
-    longName: 'Wikipedia\'s NERL',
-    sourceCode: 'https://github.com/mkdorff/NERL_CS450',
-    description: [
-      {
-        type: 'h3',
-        body: 'HI GUYS'
-      },
-      'I fondly call this project NERL, because it\'s fun to say and because it stands for Wikipedia\'s Never Ending Reading List. The idea is simple. Any ecommerce site, Amazon for example, have suggestions that litter the side of the site, based off what you have viewed and purchased. It\'s creepy. So why not give that to Wikipedia?',
-      'Seriously though, this project suggests other related Wikipedia articles you should read based of the current article you are on. I did this by analyzing all the links between pages in all of Wikipedia.',
-      ''
-    ],
-    images: [
-      {
-        image: WNERL_DataSample,
-        caption: 'Here is a sample snippet of the data. We have the nodes (pages), edges (links), and a centrality score. All the data is currently in a Google Cloud Datastore.',
-        width: 2804,
-        height: 1376
-      },
-      {
-        image: WNERL_MostOutgoing,
-        caption: 'These are the nodes that have the most outgoing edges.',
-        width: 1136,
-        height: 702
-      },
-      {
-        image: WNERL_MostIncoming,
-        caption: 'These are the node with the most incoming edges. This stat greatly influences the centrality.',
-        width: 560,
-        height: 958
-      },
-      {
-        image: WNERL_Landing,
-        caption: 'Prototype landing page for a website to explore all the data.',
-        width: 1920,
-        height: 1080
-      },
-      {
-        image: WNERL_ActiveNode,
-        caption: 'Prototype for an actual node/edge explorer view.',
-        width: 1920,
-        height: 1080
-      },
-      {
-        image: WNERL_InfoOverlay,
-        caption: 'Prototype overlay that would have a bunch of interesting stats',
-        width: 1920,
-        height: 1140
-      }
-    ]
-  },
+  WNERL,
   {
     shortName: 'Tetris',
     longName: 'Tetris',
