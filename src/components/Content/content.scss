@@ -1,13 +1,52 @@
 @import '../../_shared.scss';
 
+$desktop-max-column: 800px;
+
 .content {
   position: absolute;
   width: 100%;
-  margin-top: var(--header-height-calc);
+  max-width: 1460px;
+  height: calc(100vh - var(--header-height-calc) - 77px);
+  padding-top: calc(var(--header-height-calc) + 77px);
+  overflow: scroll;
   z-index: 1;
+  opacity: 1;
+  display: flex;
+  transform: translateY(0px);
+  @include for-mobile { flex-direction: column-reverse; }
+  // TODO: All these suck. Also, mobile
+  transition: opacity 0.2s ease, transform 0.5s ease;
   
-/*   height: 80px; */
-  // background: lavender;
-  height: 300px;
-  // border: 1px solid white;
+  .content-col {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    @include for-mobile { flex: 1 0 auto; }
+
+    .inner {
+      width: 75%;
+      @include for-mobile { width: 80%; }
+      max-width: 670px;
+    }
+
+    .visuals {
+      
+    }
+
+    .description {
+      @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
+    }
+
+    .bottom-spacer { height: 120px; width: 100%; }
+  }
+
+  // this don't work on firefox
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(30px);
 }

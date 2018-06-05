@@ -19,6 +19,12 @@ body {
   color: $white;
   @include __CB;
   position: relative;
+  overflow: hidden; // transform of content pushes bottom. Hacky?
+}
+
+#root {
+  display: flex;
+  justify-content: center;
 }
 
 .header-menu {

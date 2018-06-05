@@ -65,7 +65,7 @@ class App extends Component {
           aboutClick={this._setActive}
           seed={Seed}
           />
-        <Content seed={Seed} active={active}/>
+        <Content seed={Seed} active={active} menuOpen={showMenu}/>
       </React.Fragment>
     )
   }

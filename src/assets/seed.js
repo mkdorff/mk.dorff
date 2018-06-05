@@ -107,13 +107,6 @@ export default [
     description: 'And here is where we go ham with the text. Ham ham ham'
   },
   {
-    shortName: 'Spotify',
-    longName: 'Spotify',
-    homepage: 'https://open.spotify.com/user/mohonrid',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: []
-  },
-  {
     shortName: 'Stats',
     longName: 'Student Stats in Google Sheets',
     description: 'This one isn\'t exciting at all.'
