@@ -1,7 +1,5 @@
 @import '../../_shared.scss';
 
-$desktop-max-column: 800px;
-
 .content {
   position: absolute;
   width: 100%;
@@ -30,23 +28,38 @@ $desktop-max-column: 800px;
     }
 
     .visuals {
-      
+      .image-wrapper { margin-top: 50px; }
+      .caption { margin-top: 10px;  }
+      img { 
+        width: 100%; 
+        -webkit-backface-visibility: hidden;
+        @include simple-ease-fast(opacity);
+        &:hover { opacity: 0.8; }
+      }
     }
 
     .description {
       @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
+      .link { margin-right: 8px; display: inline; }
+      h1 { margin-bottom: 12px; }
+      h2, h3 { margin-top: 28px; }
+      ul { padding: 0; }
+      li { margin-bottom: 5px; }
+      p { font-size: 14px; line-height: 20px; }
+      .quote { opacity: 0.7; margin: 30px; font-size: 18px; line-height: 26px; }
+
+      a { 
+        color: $white;
+        text-decoration: none;
+        @include simple-ease-fast(opacity);
+        &:hover { opacity: 0.7; }
+      }
     }
 
     .bottom-spacer { height: 120px; width: 100%; }
   }
 
-  // this don't work on firefox
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  &::-webkit-scrollbar { display: none; } // this don't work on firefox
 }
 
-.hide {
-  opacity: 0;
-  transform: translateY(30px);
-}
+.hide { opacity: 0; transform: translateY(30px); }

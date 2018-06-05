@@ -47,17 +47,13 @@ export default {
       content: 'Here are two random examples:'
     },
     {
-      type: 'listItem',
-      content: '[Operation Tidal Wave] => [Alfred Gerstenberg, Addison Baker, Lloyd Herbert Hughes, Oil campaign of World War II, Sand table]'
-    },
-    {
-      type: 'listItem',
-      content: '[Pharyngeal arch] => [Carnegie stages, Common carotid, Sinus cervicalis, Cuneiform cartilages, Lesser cornu]'
+      type: 'list',
+      content: ['[Operation Tidal Wave] => [Alfred Gerstenberg, Addison Baker, Lloyd Herbert Hughes, Oil campaign of World War II, Sand table]', '[Pharyngeal arch] => [Carnegie stages, Common carotid, Sinus cervicalis, Cuneiform cartilages, Lesser cornu]']
     },
     'Do you know anything about those things? I definitely don’t, yet I feel like I’d have some more direction if I wanted to learn more about what I didn’t know. My all time favorite example was the following. My friend’s wife was just about to graduate with a degree in ‘Public Health’ so I plugged that into my little engine.',
     {
-      type: 'listItem',
-      content: '[Public health] => [Health community design, Public Health Acts, Health blog, Environmental radiation, Insurance medicine]'
+      type: 'list',
+      content: ['[Public health] => [Health community design, Public Health Acts, Health blog, Environmental radiation, Insurance medicine]']
     },
     'Her immediate reaction was priceless. She seemed surprised that a computer could produce these suggestions and explained that (with the exception of ‘Health blog’) all the suggestions were heavy topics they’ve been discussing in her classes. I too was pleasantly surprised.',
     'Since I had a wealth of information, I figured I would try to see what other interesting things I could find out. For example, I tried a ‘suggestion engine’ that, when given a node, would not only look at the connected nodes but also go another layer further. I then had it return the least important nodes. This led to things like the page ‘Apollo 11’ being linked to ‘Crop & Pasture Science.’ This brought up some introspective thoughts of how interconnected the world really is. Aren’t we all interconnected? If we averaged out how many hops it takes to get from any node to any other node, how distant would it really be? Is ‘Germany’ actually the answer to everything?',
@@ -66,66 +62,46 @@ export default {
       content: 'Fun Facts'
     },
     {
-      type: 'listItem',
-      content: 'Total nodes: 5,301,396'
-    },
-    {
-      type: 'listItem',
-      content: 'Total edges: 121,063,938'
-    },
-    {
-      type: 'listItem',
-      content: 'Average in/out edges per node: 22.8362'
-    },
-    {
-      type: 'listItem',
-      content: 'There were 537,035 nodes with 0 incoming edges'
-    },
-    {
-      type: 'listItem',
-      content: 'There were 2,654,888 nodes with 4 or less incoming edges'
-    },
-    {
-      type: 'listItem',
-      content: 'The top 10 nodes for incoming edges held 1.36% of all edges'
+      type: 'list',
+      content: ['Total nodes: 5,301,396', 'Total edges: 121,063,938', 'Average in/out edges per node: 22.8362', 'There were 537,035 nodes with 0 incoming edges', 'There were 2,654,888 nodes with 4 or less incoming edges', 'The top 10 nodes for incoming edges held 1.36% of all edges']
     }
   ],
   images: [
     {
-      image: WNERL_DataSample,
+      src: WNERL_DataSample,
       caption: 'Here is a sample snippet of the data. We have the nodes (pages), edges (links), and a centrality score. All the data is currently in a Google Cloud Datastore.',
       width: 2804,
       height: 1376
     },
     {
-      image: WNERL_MostOutgoing,
+      src: WNERL_MostOutgoing,
       caption: 'These are the nodes that have the most outgoing edges.',
       width: 1136,
       height: 702
     },
     {
-      image: WNERL_MostIncoming,
-      caption: 'These are the node with the most incoming edges. This stat greatly influences the centrality.',
-      width: 560,
-      height: 958
-    },
-    {
-      image: WNERL_Landing,
+      src: WNERL_Landing,
       caption: 'Prototype landing page for a website to explore all the data.',
       width: 1920,
       height: 1080
     },
     {
-      image: WNERL_ActiveNode,
+      src: WNERL_ActiveNode,
       caption: 'Prototype for an actual node/edge explorer view.',
       width: 1920,
       height: 1080
     },
     {
-      image: WNERL_InfoOverlay,
+      src: WNERL_InfoOverlay,
       caption: 'Prototype overlay that would have a bunch of interesting stats',
       width: 1920,
       height: 1140
+    },
+    {
+      src: WNERL_MostIncoming,
+      caption: 'These are the node with the most incoming edges. This stat greatly influences the centrality.',
+      width: 560,
+      height: 958
     }
   ]
 }
