@@ -1,8 +1,7 @@
 import WNERL from './W.NERL'
 import Tetris from './Tetris'
+import Submarine from './Submarine'
 
-// NOTE: so maybe just have images on the left, description on the right
-// on mobile: images first, then description. Simple
 export default [
   {
     shortName: 'About',
@@ -13,13 +12,7 @@ export default [
   },
   WNERL,
   Tetris,
-  {
-    shortName: 'Submarine',
-    longName: 'E.T. Submarine',
-    sourceCode: 'https://github.com/mkdorff/Ethernet-Tethered-Submarine',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: []
-  },
+  Submarine,
   {
     shortName: 'Yuki',
     longName: 'Yuki Dorff Design',
