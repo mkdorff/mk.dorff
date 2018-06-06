@@ -1,4 +1,5 @@
 import WNERL from './W.NERL'
+import Tetris from './Tetris'
 
 // NOTE: so maybe just have images on the left, description on the right
 // on mobile: images first, then description. Simple
@@ -11,15 +12,7 @@ export default [
     hideFromMenu: true
   },
   WNERL,
-  {
-    shortName: 'Tetris',
-    longName: 'Tetris',
-    sourceCode: 'https://github.com/mkdorff/c-tetris',
-    description: [
-      'And here is where we go ham with the text. Ham ham ham'
-    ],
-    images: []
-  },
+  Tetris,
   {
     shortName: 'Submarine',
     longName: 'E.T. Submarine',

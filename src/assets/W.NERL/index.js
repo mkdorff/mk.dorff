@@ -1,13 +1,13 @@
-import WNERL_DataSample from './DataSample.png'
-import WNERL_MostOutgoing from './MostOutgoing.png'
-import WNERL_MostIncoming from './MostIncoming.png'
-import WNERL_Landing from './Landing.png'
-import WNERL_ActiveNode from './ActiveNode.png'
-import WNERL_InfoOverlay from './InfoOverlay.png'
+import DataSample from './DataSample.png'
+import MostOutgoing from './MostOutgoing.png'
+import MostIncoming from './MostIncoming.png'
+import Landing from './Landing.png'
+import ActiveNode from './ActiveNode.png'
+import InfoOverlay from './InfoOverlay.png'
 
 export default {
   shortName: 'W.NERL',
-  longName: 'Wikipedia\'s NERL',
+  longName: 'Wikipedia’s NERL',
   sourceCode: 'https://github.com/mkdorff/NERL_CS450',
   description: [
     {
@@ -68,40 +68,28 @@ export default {
   ],
   images: [
     {
-      src: WNERL_DataSample,
-      caption: 'Here is a sample snippet of the data. We have the nodes (pages), edges (links), and a centrality score. All the data is currently in a Google Cloud Datastore.',
-      width: 2804,
-      height: 1376
+      src: DataSample,
+      caption: 'Here is a sample snippet of the data. We have the nodes (pages), edges (links), and a centrality score. All the data is currently in a Google Cloud Datastore.'
     },
     {
-      src: WNERL_MostOutgoing,
-      caption: 'These are the nodes that have the most outgoing edges.',
-      width: 1136,
-      height: 702
+      src: MostOutgoing,
+      caption: 'These are the nodes that have the most outgoing edges.'
     },
     {
-      src: WNERL_Landing,
-      caption: 'Prototype landing page for a website to explore all the data.',
-      width: 1920,
-      height: 1080
+      src: Landing,
+      caption: 'Prototype landing page for a website to explore all the data.'
     },
     {
-      src: WNERL_ActiveNode,
-      caption: 'Prototype for an actual node/edge explorer view.',
-      width: 1920,
-      height: 1080
+      src: ActiveNode,
+      caption: 'Prototype for an actual node/edge explorer view.'
     },
     {
-      src: WNERL_InfoOverlay,
-      caption: 'Prototype overlay that would have a bunch of interesting stats',
-      width: 1920,
-      height: 1140
+      src: InfoOverlay,
+      caption: 'Prototype overlay that would have a bunch of interesting stats.'
     },
     {
-      src: WNERL_MostIncoming,
-      caption: 'These are the node with the most incoming edges. This stat greatly influences the centrality.',
-      width: 560,
-      height: 958
+      src: MostIncoming,
+      caption: 'These are the node with the most incoming edges. This stat greatly influences the centrality.'
     }
   ]
 }
