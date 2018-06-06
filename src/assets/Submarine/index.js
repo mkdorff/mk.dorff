@@ -14,7 +14,7 @@ export default {
     {
       type: 'link',
       content: 'video link',
-      link: 'https://youtu.be/pkmODbhjE9w'
+      link: 'https://www.youtube.com/watch?v=pkmODbhjE9w'
     },
     {
       type: 'bigHeader',

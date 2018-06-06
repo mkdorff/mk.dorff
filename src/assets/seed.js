@@ -1,6 +1,7 @@
 import WNERL from './W.NERL'
 import Tetris from './Tetris'
 import Submarine from './Submarine'
+import Yuki from './Yuki'
 
 export default [
   {
@@ -13,13 +14,7 @@ export default [
   WNERL,
   Tetris,
   Submarine,
-  {
-    shortName: 'Yuki',
-    longName: 'Yuki Dorff Design',
-    homepage: 'https://www.yukidorff.com/',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: []
-  },
+  Yuki,
   {
     shortName: 'Sahara',
     longName: 'Sahara Dev',
