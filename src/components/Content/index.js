@@ -39,6 +39,7 @@ export default class Content extends Component {
             <h1 className='full-name'>{longName}</h1>
             {homepage && <div className='link'><a href={homepage} target='_blank'>homepage</a></div>}
             {sourceCode && <div className='link'><a href={sourceCode} target='_blank'>source code</a></div>}
+            {/* eslint-disable-next-line */}
             {description && description.map(this._generateEls)}
             <div className='bottom-spacer'></div>
           </div>
@@ -70,7 +71,7 @@ export default class Content extends Component {
       case 'bigHeader':
         return <h3 key={idx}>{section.content}</h3>
       case 'link':
-        return <a key={idx} href={section.link} target='_blank'>{section.content}</a> // Implement this when we run into this
+        return <a key={idx} href={section.link} target='_blank' className='content-link'>{section.content}</a>
       case 'list':
         return (
           <ul key={idx}>

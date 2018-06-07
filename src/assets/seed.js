@@ -2,6 +2,7 @@ import WNERL from './W.NERL'
 import Tetris from './Tetris'
 import Submarine from './Submarine'
 import Yuki from './Yuki'
+import Sahara from './Sahara'
 
 export default [
   {
@@ -15,13 +16,7 @@ export default [
   Tetris,
   Submarine,
   Yuki,
-  {
-    shortName: 'Sahara',
-    longName: 'Sahara Dev',
-    homepage: 'http://www.saharadev.com/',
-    description: 'There was this place I worked for that went bankrupt',
-    images: []
-  },
+  Sahara,
   {
     shortName: 'FS',
     longName: 'FamilySearch',

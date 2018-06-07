@@ -47,11 +47,14 @@
       li { margin-bottom: 5px; }
       p { font-size: 14px; line-height: 20px; }
       .quote { opacity: 0.7; margin: 30px; font-size: 18px; line-height: 26px; }
-
       a { 
         color: $white;
         @include simple-ease-fast(opacity);
         &:hover { opacity: 0.7; }
+      }
+      .content-link { 
+        display: table; // yuck
+        margin-bottom: 6px;
       }
     }
 
