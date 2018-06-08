@@ -3,6 +3,8 @@ import Tetris from './Tetris'
 import Submarine from './Submarine'
 import Yuki from './Yuki'
 import Sahara from './Sahara'
+import FS from './FS'
+import Mapover from './Mapover'
 
 export default [
   {
@@ -17,20 +19,8 @@ export default [
   Submarine,
   Yuki,
   Sahara,
-  {
-    shortName: 'FS',
-    longName: 'FamilySearch',
-    homepage: 'https://www.familysearch.org/',
-    description: 'I work here right now',
-    images: []
-  },
-  {
-    shortName: 'Mapover',
-    longName: 'Mapover',
-    homepage: 'https://www.npmjs.com/package/mapover',
-    sourceCode: 'https://github.com/mkdorff/mapover-js',
-    description: 'And here is where we go ham with the text. Ham ham ham'
-  },
+  FS,
+  Mapover,
   {
     shortName: 'Hippo',
     longName: 'Hippo Hippo',
