@@ -1,3 +1,5 @@
+// About
+
 import WNERL from './W.NERL'
 import Tetris from './Tetris'
 import Submarine from './Submarine'
@@ -12,6 +14,7 @@ import Asteroids from './Asteroids'
 import Physics from './Physics'
 import RSA from './RSA'
 import Sudoku from './Sudoku'
+import Manga from './Manga!'
 
 export default [
   {
@@ -35,13 +38,7 @@ export default [
   Physics,
   RSA,
   Sudoku,
-  {
-    shortName: 'Manga!',
-    longName: 'Manga Web Scraper',
-    sourceCode: 'https://github.com/mkdorff/kissmanga-scraper',
-    description: 'And here is where we go ham with the text. Ham ham ham'
-  }
-  // TO ADD WHEN FINISHED:
+  Manga
   // OPOF
   // FACE MORPH
   // PARALLAX
