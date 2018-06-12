@@ -8,6 +8,8 @@ import Mapover from './Mapover'
 import Hippo from './Hippo'
 import ML from './ML'
 import Windo from './Windo'
+import Asteroids from './Asteroids'
+import Physics from './Physics'
 
 export default [
   {
@@ -27,19 +29,8 @@ export default [
   Hippo,
   ML,
   Windo,
-  {
-    shortName: 'Asteroids',
-    longName: 'Asteroids',
-    sourceCode: 'https://github.com/mkdorff/Asteroids',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: []
-  },
-  {
-    shortName: 'Physics',
-    longName: 'Electricity & Magnetism Projects',
-    sourceCode: 'https://github.com/mkdorff/PHY220',
-    description: 'And here is where we go ham with the text. Ham ham ham'
-  },
+  Asteroids,
+  Physics,
   {
     shortName: 'RSA',
     longName: 'RSA in JS & E-LISP',
