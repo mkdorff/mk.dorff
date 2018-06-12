@@ -7,6 +7,7 @@ import FS from './FS'
 import Mapover from './Mapover'
 import Hippo from './Hippo'
 import ML from './ML'
+import Windo from './Windo'
 
 export default [
   {
@@ -25,13 +26,7 @@ export default [
   Mapover,
   Hippo,
   ML,
-  {
-    shortName: 'Windo',
-    longName: 'Windo App',
-    sourceCode: 'https://github.com/mkdorff/windo',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: [],
-  },
+  Windo,
   {
     shortName: 'Asteroids',
     longName: 'Asteroids',
