@@ -5,6 +5,8 @@ import Yuki from './Yuki'
 import Sahara from './Sahara'
 import FS from './FS'
 import Mapover from './Mapover'
+import Hippo from './Hippo'
+import ML from './ML'
 
 export default [
   {
@@ -21,19 +23,8 @@ export default [
   Sahara,
   FS,
   Mapover,
-  {
-    shortName: 'Hippo',
-    longName: 'Hippo Hippo',
-    sourceCode: 'https://github.com/mkdorff/Hippo',
-    description: 'And here is where we go ham with the text. Ham ham ham',
-    images: []
-  },
-  {
-    shortName: 'ML',
-    longName: 'Machine Learning Algorithms',
-    sourceCode: 'https://github.com/mkdorff/CS450',
-    description: 'And here is where we go ham with the text. Ham ham ham'
-  },
+  Hippo,
+  ML,
   {
     shortName: 'Windo',
     longName: 'Windo App',
