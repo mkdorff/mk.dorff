@@ -7,10 +7,9 @@ export default {
       type: 'bigHeader',
       content: 'Beep, Beep, Meep, Squeek, Beep, Boop'
     },
-    'I am a teacher of sorts. In my quest to enlighten the unenlightened, I taught and they learned. They must also learn how to learn and I, therefore, taught how to learn. I learned how to teach one how to learn from a greater teacher, whose knowledge was passed down from a grand line of teachers. Who then, was the first teacher?',
-    'Let’s take little kevin. Many say that he does not think for himself and he just thinks what you want him to think. To an extent, this is true. But aren’t we all just big fancy input/output systems, reacting to what’s around us and spitting out relatively predictable outputs? We are computers and everything is a simulation.',
-    'kevin is my Mac. paul is my phone. chase is my car. We go on grand adventures together. They are most definitely proper nouns but proper nouns that aren’t capitalized. Deal with it.',
-    'I spent a solid 4 months teaching myself python and then writing machine learning algorithms (ahem… teaching kevin some algorithms) as part of my Machine Learning & Data Mining class. We used a wide array of datasets - both nominal and numerical and we used quite a number of different algorithms, about half of which we wrote from scratch. The list includes:',
+    'I am a teacher of sorts with a quest to enlighten the unenlightened. I teach and they learn. They must also learn how to learn and I, therefore, taught how to learn. I learned how to teach one how to learn from a greater teacher, whose knowledge was passed down from a grand line of teachers. In other words, I’m a programmer and I teach computers how to learn things.',
+    'Case study #1: kevin (yes that’s kevin with a lower case k). kevin is my mac. People say kevin  doesn’t think for himself, just what you want him to think. To an extent, this is true. At his core, he is complex circuitry, where inputs produce predictable and calculated outcomes. But aren’t we all just big fancy input/output systems, reacting to what’s around us and spitting out relatively predictable outputs? How are humans really any different from computers?',
+    'To answer this, I spent a 4 months in a Machine Learning & Data Mining class learning python and then writing machine learning algorithms (ahem… teaching kevin some algorithms). We used a wide array of datasets - both nominal and numerical and we used quite a number of different algorithms, about half of which we wrote from scratch. The list includes:',
     {
       type: 'list',
       content: ['k Nearest Neighbors', 'Decision Trees', 'Neural Networks (Multilayer Perceptrons)', 'Apriori', 'Clustering', 'Social Networking Analysis', 'Support Vector Machines', 'Ensemble']
