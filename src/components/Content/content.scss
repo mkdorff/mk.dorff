@@ -40,21 +40,17 @@
 
     .description {
       @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
-      .link { margin-right: 8px; display: inline; }
+      .link { margin-right: 8px; margin-bottom: 8px; display: inline-block; }
       h1 { margin-bottom: 12px; }
       h2, h3 { margin-top: 28px; }
       ul { padding: 0; }
-      li { margin-bottom: 5px; }
+      li { margin-bottom: 5px; font-size: 14px; }
       p { font-size: 14px; line-height: 20px; }
       .quote { opacity: 0.7; margin: 30px; font-size: 18px; line-height: 26px; }
       a { 
         color: $white;
         @include simple-ease-fast(opacity);
         &:hover { opacity: 0.7; }
-      }
-      .content-link { 
-        display: table; // yuck
-        margin-bottom: 6px;
       }
     }
 

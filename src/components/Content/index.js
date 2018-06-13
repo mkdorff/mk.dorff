@@ -71,7 +71,7 @@ export default class Content extends Component {
       case 'bigHeader':
         return <h3 key={idx}>{section.content}</h3>
       case 'link':
-        return <a key={idx} href={section.link} target='_blank' className='content-link'>{section.content}</a>
+        return <div key={idx} className='link'><a href={section.link} target='_blank'>{section.content}</a></div>
       case 'list':
         return (
           <ul key={idx}>

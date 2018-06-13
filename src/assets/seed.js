@@ -1,4 +1,4 @@
-// About
+import About from './About'
 
 import WNERL from './W.NERL'
 import Tetris from './Tetris'
@@ -14,16 +14,10 @@ import Asteroids from './Asteroids'
 import Physics from './Physics'
 import RSA from './RSA'
 import Sudoku from './Sudoku'
-import Manga from './Manga!'
+import Manga from './Manga'
 
 export default [
-  {
-    shortName: 'About',
-    longName: 'About',
-    description: '',
-    images: [],
-    hideFromMenu: true
-  },
+  About,
   WNERL,
   Tetris,
   Submarine,
