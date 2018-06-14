@@ -42,7 +42,7 @@ export default class Links extends Component {
 
     return (
       <React.Fragment>
-        <div className={`backdrop ${menuOpen ? 'hide-behind' : ''}`}></div>
+        <div className={`backdrop ${menuOpen ? 'hide-behind' : ''}`} onClick={this._handleMenuClick}></div>
         <div className='links'>
           <div className={`left ${menuOpen ? 'show-links' : ''}`}>
             {showMenuButton && <div className='link' onClick={this._handleMenuClick}>menu</div>}

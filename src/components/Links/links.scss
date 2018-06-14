@@ -74,6 +74,7 @@
   width: calc(100vw + var(--header-width-addition));
   transform-origin: center bottom;
   z-index: 3;
+  cursor: pointer;
   @include tilt;
   @include simple-ease-med(background-color);
   &.hide-behind { background-color: $white; }
