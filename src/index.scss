@@ -1,7 +1,7 @@
 @import './_shared.scss';
 
 :root {
-  // tan(2) = 0.034920769491748 - I can't even rn. ugh
+  // tan(2) = 0.034920769491748
   --height-addition: calc(0.034920769491748 * 100vw / 2);
   
   --header-height-rect: 160px;
@@ -19,7 +19,7 @@ body {
   color: $white;
   @include __CB;
   position: relative;
-  overflow: hidden; // transform of content pushes bottom. Hacky?
+  overflow: hidden;
 }
 
 #root {

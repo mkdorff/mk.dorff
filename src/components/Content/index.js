@@ -29,12 +29,6 @@ export default class Content extends Component {
     return (
       <div className={`content ${active ? '' : 'hide'}`} ref={this.contentRef}>
         <div className='content-col'>
-          <div className='visuals inner'>
-          {images && images.map(this._generateImgs)}
-          <div className='bottom-spacer'></div>
-          </div>
-        </div>
-        <div className='content-col'>
           <div className='description inner'>
             <h1 className='full-name'>{longName}</h1>
             {homepage && <div className='link'><a href={homepage} target='_blank'>homepage</a></div>}
@@ -42,6 +36,12 @@ export default class Content extends Component {
             {/* eslint-disable-next-line */}
             {description && description.map(this._generateEls)}
             <div className='bottom-spacer'></div>
+          </div>
+        </div>
+        <div className='content-col'>
+          <div className='visuals inner'>
+          {images && images.map(this._generateImgs)}
+          <div className='bottom-spacer'></div>
           </div>
         </div>
       </div>

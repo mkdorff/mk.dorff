@@ -3,7 +3,6 @@
 .content {
   position: absolute;
   width: 100%;
-  max-width: 1460px;
   height: calc(100vh - var(--header-height-calc) - 77px);
   padding-top: calc(var(--header-height-calc) + 77px);
   overflow: scroll;
@@ -11,7 +10,9 @@
   opacity: 1;
   display: flex;
   transform: translateY(0px);
-  @include for-mobile { flex-direction: column-reverse; }
+  flex-direction: row-reverse;
+  @include for-desktop { justify-content: center; }
+  @include for-mobile { flex-direction: column; }
   // TODO: All these suck. Also, mobile
   transition: opacity 0.2s ease, transform 0.5s ease;
   
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: center;
     flex: 1 1 auto;
+    @include for-desktop{ max-width: 730px; }
     @include for-mobile { flex: 1 0 auto; }
 
     .inner {
@@ -39,7 +41,7 @@
     }
 
     .description {
-      @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
+      // @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
       .link { margin-right: 8px; margin-bottom: 8px; display: inline-block; }
       h1 { margin-bottom: 12px; }
       h2, h3 { margin-top: 28px; }
