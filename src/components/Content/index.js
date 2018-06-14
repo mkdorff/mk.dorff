@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Arrows from '../Arrows'
 import './content.css'
 
 // props = {active, seed, menuOpen}
@@ -23,7 +24,7 @@ export default class Content extends Component {
 
   // Maybe implement invertbackground later. Also videos.
   render() {
-    const {active} = this.props;
+    const {active, onPrev, onNext} = this.props;
     const {longName, homepage, sourceCode, description, images} = active || {};
     
     return (
@@ -31,17 +32,20 @@ export default class Content extends Component {
         <div className='content-col'>
           <div className='description inner'>
             <h1 className='full-name'>{longName}</h1>
-            {homepage && <div className='link'><a href={homepage} target='_blank'>homepage</a></div>}
-            {sourceCode && <div className='link'><a href={sourceCode} target='_blank'>source code</a></div>}
-            {/* eslint-disable-next-line */}
-            {description && description.map(this._generateEls)}
+              {homepage && <div className='link'><a href={homepage} target='_blank'>homepage</a></div>}
+              {sourceCode && <div className='link'><a href={sourceCode} target='_blank'>source code</a></div>}
+              {/* eslint-disable-next-line */}
+              {description && description.map(this._generateEls)}
             <div className='bottom-spacer'></div>
           </div>
         </div>
         <div className='content-col'>
           <div className='visuals inner'>
-          {images && images.map(this._generateImgs)}
-          <div className='bottom-spacer'></div>
+            {images && images.map(this._generateImgs)}
+            <div className='mobile-arrows-wrapper'>
+              <Arrows className='mobile-arrows' onPrev={onPrev} onNext={onNext}/>
+            </div>
+            <div className='bottom-spacer'></div>
           </div>
         </div>
       </div>

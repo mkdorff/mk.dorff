@@ -1,13 +1,25 @@
 @import '../../_shared.scss';
 
-.arrows {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 4;
+$arrow-side-length: 55px;
 
-  @include simple-ease-fast(opacity);
-  &:hover {
-    opacity: 0.3;
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 121px;
+
+  .arrow-wrapper {
+    cursor: pointer;
+    height: $arrow-side-length;
+    width: $arrow-side-length;
+    @include simple-ease-med(opacity);
+    
+    img { 
+      width: 100%; 
+      background: black;
+      border-radius: 100%;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    }
+    
+    &:hover { opacity: 0.6; }
   }
 }

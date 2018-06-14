@@ -36,3 +36,15 @@ body {
   max-height: 100vh;
   z-index: 2;
 }
+
+.controls {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 4;
+  @include for-mobile { display: none !important; }
+}
+
+.hide-controls {
+  display: none !important;
+}

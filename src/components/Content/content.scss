@@ -13,7 +13,6 @@
   flex-direction: row-reverse;
   @include for-desktop { justify-content: center; }
   @include for-mobile { flex-direction: column; }
-  // TODO: All these suck. Also, mobile
   transition: opacity 0.2s ease, transform 0.5s ease;
   
   .content-col {
@@ -38,10 +37,18 @@
         @include simple-ease-fast(opacity);
         &:hover { opacity: 0.8; }
       }
+
+      .mobile-arrows-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 65px;
+        @include for-desktop { display: none !important; }
+        
+        .mobile-arrows { width: 180px; } 
+      }
     }
 
     .description {
-      // @include for-mobile { padding-top: calc(var(--header-height-calc) + 77px); }
       .link { margin-right: 8px; margin-bottom: 8px; display: inline-block; }
       h1 { margin-bottom: 12px; }
       h2, h3 { margin-top: 28px; }

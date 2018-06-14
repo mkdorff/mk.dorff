@@ -3,14 +3,14 @@ import LeftArrow from './LeftArrow.png'
 import RightArrow from './RightArrow.png'
 import './arrows.css'
 
-export default function Arrows({seed, showArrows, onActiveChange}) {
+export default function Arrows({className, onPrev, onNext}) {
   return (
-    <div className='arrows'>
-      <div className="left-arrow">
-        <img src={LeftArrow} alt="" srcset=""/>
+    <div className={`arrows ${className ? className : ''}`}>
+      <div className='arrow-wrapper' onClick={onPrev}>
+        <img src={LeftArrow} alt='left'/>
       </div>
-      <div className="right-arrow">
-        <img src={RightArrow} alt="" srcset=""/>
+      <div className='arrow-wrapper' onClick={onNext}>
+        <img src={RightArrow} alt='right'/>
       </div>
     </div>
   )
