@@ -3,7 +3,7 @@ import UnderwaterShot from './UnderwaterShot.png'
 import Controls from './Controls.png'
 
 export default {
-  shortName: 'E.T. Submarine',
+  shortName: 'Submarine',
   longName: 'Ethernet Tethered Submarine',
   sourceCode: 'https://github.com/mkdorff/Ethernet-Tethered-Submarine',
   description: [
