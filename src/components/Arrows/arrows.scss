@@ -1,1 +1,13 @@
 @import '../../_shared.scss';
+
+.arrows {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+
+  @include simple-ease-fast(opacity);
+  &:hover {
+    opacity: 0.3;
+  }
+}
