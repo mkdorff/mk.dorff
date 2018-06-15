@@ -9,6 +9,7 @@
   background: $white;
   justify-content: space-between;
   transform-origin: center bottom;
+  cursor: pointer;
   @include tilt;
 
   .title {

@@ -23,9 +23,13 @@ export default class Header extends Component {
     }, 300)
   }
 
+  _returnHome = () => {
+    this.props.onClick.call(null, '');
+  }
+
   render() {
     return (
-      <div className='header'>
+      <div className='header' onClick={this._returnHome}>
         <div ref={this.titleRef} className={`title ${this.props.hideTitle ? 'forced-fade': ''}`}>
           {this.state.content}
         </div>

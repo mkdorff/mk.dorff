@@ -1,70 +1,53 @@
 import React, { Component } from 'react'
 import './links.css'
 
+// Images
 import Logo from '../../assets/Global/logo.png'
 import Menu from '../../assets/Global/menu.png'
 import Close from '../../assets/Global/close.png'
 import Resume from '../../assets/Global/Mohonri Resume.pdf'
 
+// Helpers
+import { isEmpty } from '../../helpers/Object'
+
 export default class Links extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      menuOpen: false
-    }
+    this.state = { menuOpen: false }
   }
 
-  static getDerivedStateFromProps(props, state) {
-    return props.showMenuButton ? {menuOpen:false} : null;
+  _handleMenu = e => {
+    const open = e.target.id === 'open';
+    this.props.hideTitle.call(null, open);
+    this.setState({menuOpen: open})
   }
 
-  _handleMenuClick = () => {
-    this.setState({menuOpen: false});
-    this.props.menuClick();
-  }
-
-  _handleAboutClick = () => {
-    this.props.aboutClick(this.props.seed.filter(item => item.longName === "About")[0]);
-  }
-
-  _openMenu = () => {
-    this.setState({menuOpen: true})
-  }
-
-  _closeMenu = () => {
-    this.setState({menuOpen: false})
+  _handleClick = e => {
+    this.props.linkClick.call(null, e.target.id === 'about' ? 'About' : '');
   }
 
   render() {
-    const {showMenuButton} = this.props;
-    const {menuOpen} = this.state;
+    const { _handleMenu, _handleClick} = this;
 
     return (
-      <React.Fragment>
-        <div className={`backdrop ${menuOpen ? 'hide-behind' : ''}`} onClick={this._handleMenuClick}></div>
-        <div className='links'>
-          <div className={`left ${menuOpen ? 'show-links' : ''}`}>
-            {showMenuButton && <div className='link' onClick={this._handleMenuClick}>menu</div>}
-            <div className='link' onClick={this._handleAboutClick}>about</div>
-            <div className='link'>
-              <a href={Resume} target='_blank'>resume</a>
-            </div>
+      <div className='links'>
+        <div className={`left ${this.state.menuOpen ? 'show-links' : ''}`}>
+          <div className={`link ${isEmpty(this.props.hideMenu) ? 'hide-menu' : ''}`} onClick={_handleClick} id='menu'>menu</div>
+          <div className='link' onClick={_handleClick} id='about'>about</div>
+          <div className='link'><a href={Resume} target='_blank'>resume</a></div>
+        </div>
+        <div className='right'>
+          <div className='mobile-toggle'>
+            {this.state.menuOpen ? 
+              <img src={Close} alt='menu close' onClick={_handleMenu} id='close' /> :
+              <img src={Menu} alt='menu open' onClick={_handleMenu} id='open' />
+            }
           </div>
-          <div className='right'>
-            <div className='mobile-toggle'>
-              {/* --Animations-- */}
-              {menuOpen ? 
-                <img src={Close} alt='menu close' onClick={this._closeMenu}/> :
-                <img src={Menu} alt='menu open' onClick={this._openMenu}/>
-              }
-            </div>
-            <div className='logo-wrapper' onClick={this._handleMenuClick}>
-              <img src={Logo} alt='Logo'/>
-            </div>
+          <div className='logo-wrapper' onClick={_handleClick} id='logo'>
+            <img src={Logo} alt='Logo'/>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

@@ -15,10 +15,10 @@ export default function Arrows({className, onClick}) {
   return (
     <div className={`arrows ${className ? className : ''}`}>
       <div className='arrow-wrapper' onClick={prev}>
-        <img src={LeftArrow} alt='left'/>
+        <img src={LeftArrow} alt='left' />
       </div>
       <div className='arrow-wrapper' onClick={next}>
-        <img src={RightArrow} alt='right'/>
+        <img src={RightArrow} alt='right' />
       </div>
     </div>
   )

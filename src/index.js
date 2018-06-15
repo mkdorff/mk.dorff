@@ -15,13 +15,13 @@ import Content from './components/Content'
 import KeyboardShortcuts from './components/KeyboardShortcuts'
 
 // Helpers
-import { prevEl, nextEl } from './helpers/safeWrapArray'
+import { prevEl, nextEl } from './helpers/Array'
 
 class App extends Component {
   // Lifecycle
   constructor(props) {
     super(props);
-    this.state = { active: '', menu: true }
+    this.state = { active: '', menu: true, hideTitle: false }
   }
 
   componentDidMount() {
@@ -48,23 +48,27 @@ class App extends Component {
     this.setState({ active: active, menu: !active });
   }
 
-  _arrowControl = (dir) => {
+  _setTitle = hide => {
+    this.setState({hideTitle: hide})
+  }
+
+  _arrowControl = dir => {
     const currIdx = Seed.indexOf(this.state.active);
     this._setHash(dir === 'next' ? nextEl(Seed, currIdx).longName : prevEl(Seed, currIdx).longName);
   }
 
   // Render
   render() {
-    const { active = {}, menu } = this.state;
-    const { _setHash, _arrowControl } = this;
+    const { active = {}, menu, hideTitle } = this.state;
+    const { _setHash, _setTitle, _arrowControl } = this;
 
     return (
       <React.Fragment>
         <div className='header-menu'>
-          <Header content={active.shortName} hideTitle={true} />
+          <Header content={active.shortName} hideTitle={hideTitle} onClick={_setHash} />
           <Menu seed={Seed} showMenu={menu} onItemClick={_setHash} />
         </div>
-        <Links showMenuButton={!menu} menuClick={_setHash} aboutClick={_setHash} seed={Seed} />
+        <Links hideMenu={active} linkClick={_setHash} hideTitle={_setTitle} />
         <Content seed={Seed} active={active} menuOpen={menu} onArrows={_arrowControl} />
         <Arrows className={`controls ${menu ? 'hide-controls' : ''}`} onClick={_arrowControl} />
         <KeyboardShortcuts onEsc={_setHash} onArrows={_arrowControl} />

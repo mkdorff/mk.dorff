@@ -26,6 +26,7 @@
     }
 
     .link {
+      cursor: pointer;
       @include simple-ease-fast(opacity);      
       @include for-mobile {
         font-size: 24px;
@@ -35,10 +36,10 @@
       @include for-desktop {
         font-size: 18px;
         margin: 0 11px;
-        cursor: pointer;
       }
 
       &:hover { opacity: 0.5; }
+      &.hide-menu { opacity: 0; }
       a { text-decoration: none; color: $black; }
     }
   }
@@ -46,10 +47,10 @@
   .right {
     .mobile-toggle {
       @include for-desktop{ display: none; }
-      margin-right: 10px;
+      margin-right: 14px;
       width: 30px;
       height: 30px;
-      
+      cursor: pointer;
       img { width: 100%; }
     } 
     
@@ -64,18 +65,4 @@
       img { width: 100%; }
     }
   }
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  height: var(--header-height-calc);
-  margin-top: calc(-1*var(--height-addition));
-  width: calc(100vw + var(--header-width-addition));
-  transform-origin: center bottom;
-  z-index: 3;
-  cursor: pointer;
-  @include tilt;
-  @include simple-ease-med(background-color);
-  &.hide-behind { background-color: $white; }
 }
