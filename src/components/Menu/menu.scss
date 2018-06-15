@@ -3,6 +3,7 @@
 .menu {
   width: 100vw;
   background: transparent;
+  animation: 0.3s ease forwards show-menu;
 
   @include for-mobile {
     overflow: scroll;
@@ -18,7 +19,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: opacity 0.5s cubic-bezier(.82,.01,.63,-0.13), height 0.5s cubic-bezier(.5,1.16,.16,.98);
   }
   
   .menu-item {
@@ -62,9 +62,17 @@
     }
   }
 
-  &.hide-menu {
-    transition: opacity 0.4s ease, height 0.8s cubic-bezier(.82,.04,.54,-0.13);
-    height: 0 !important;
-    opacity: 0 !important;
-  }
+  &.hide-menu { animation: 0.3s ease forwards hide-menu; }
+}
+
+@keyframes hide-menu{
+  0% { opacity: 1; }
+  99% { opacity: 0; max-height: 100vh; }
+  100% { opacity: 0; max-height: 0; }
+}
+
+@keyframes show-menu{
+  0% { opacity: 0; max-height: 0; }
+  1% { opacity: 0; max-height: 100vh;}
+  99% { opacity: 1; }
 }
