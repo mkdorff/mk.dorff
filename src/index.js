@@ -80,3 +80,6 @@ class App extends Component {
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+fetch('https://us-central1-mkdorff-38e42.cloudfunctions.net/logVisit', { mode: 'no-cors'}).then(() => {
+  console.log('visit logged :D');
+})
