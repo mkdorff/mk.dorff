@@ -3,8 +3,8 @@
 .content {
   position: absolute;
   width: 100%;
-  height: calc(100vh - var(--header-height-calc) - 77px);
-  padding-top: calc(var(--header-height-calc) + 77px);
+  height: calc(100vh - var(--header-height-comp) - 77px);
+  padding-top: calc(var(--header-height-comp) + 77px);
   overflow: scroll;
   z-index: 1;
   opacity: 1;

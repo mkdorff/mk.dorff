@@ -7,7 +7,7 @@
   --header-height-rect: 160px;
   @include for-desktop { --header-height-rect: 170px; }
   --header-width-addition: calc(0.034920769491748 * var(--header-height-rect));
-  --header-height-calc: calc(var(--header-height-rect) + var(--height-addition));
+  --header-height-comp: calc(var(--header-height-rect) + var(--height-addition));
   
   --menu-height: calc(100vh - var(--header-height-rect));
   --menu-width-addition: calc(0.034920769491748 * var(--menu-height));
@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   @include for-desktop { overflow-y: hidden; }
   width: 100vw;
-  min-height: var(--header-height-calc);
+  min-height: var(--header-height-comp);
   max-height: 100vh;
   z-index: 2;
 }

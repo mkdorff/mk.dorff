@@ -1,7 +1,7 @@
 @import '../../_shared.scss';
 
 .header {
-  height: var(--header-height-calc);
+  height: var(--header-height-comp);
   margin-top: calc(-1*var(--height-addition));
   width: calc(100vw + var(--header-width-addition));
   @include __MB;
