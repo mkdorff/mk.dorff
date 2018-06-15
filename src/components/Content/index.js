@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Arrows from '../Arrows'
 import './content.css'
 
-// props = {active, seed, menuOpen}
+import { isEmpty } from '../../helpers/Object'
+
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +11,8 @@ export default class Content extends Component {
   }
 
   // Man, this got real ugly real fast
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.menuOpen) {
+  shouldComponentUpdate(nextProps) {
+    if (isEmpty(nextProps.active)) {
       setTimeout(() => {
         this.contentRef.current.scrollTo(0,0);
       }, 300);
@@ -28,13 +29,12 @@ export default class Content extends Component {
     const {longName, homepage, sourceCode, description, images} = active || {};
     
     return (
-      <div className={`content ${active ? '' : 'hide'}`} ref={this.contentRef}>
+      <div className={`content ${isEmpty(active) ? 'hide' : ''}`} ref={this.contentRef}>
         <div className='content-col'>
           <div className='description inner'>
             <h1 className='full-name'>{longName}</h1>
               {homepage && <div className='link'><a href={homepage} target='_blank'>homepage</a></div>}
               {sourceCode && <div className='link'><a href={sourceCode} target='_blank'>source code</a></div>}
-              {/* eslint-disable-next-line */}
               {description && description.map(this._generateEls)}
             <div className='bottom-spacer'></div>
           </div>
