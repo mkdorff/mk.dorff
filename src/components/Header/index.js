@@ -26,7 +26,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <div className={`title`} ref={this.titleRef}>
+        <div ref={this.titleRef} className={`title ${this.props.hideTitle ? 'forced-fade': ''}`}>
           {this.state.content}
         </div>
       </div>

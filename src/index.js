@@ -61,7 +61,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className='header-menu'>
-          <Header content={active.shortName} />
+          <Header content={active.shortName} hideTitle={true} />
           <Menu seed={Seed} showMenu={menu} onItemClick={_setHash} />
         </div>
         <Links showMenuButton={!menu} menuClick={_setHash} aboutClick={_setHash} seed={Seed} />
