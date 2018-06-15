@@ -16,12 +16,13 @@ import KeyboardShortcuts from './components/KeyboardShortcuts'
 
 // Helpers
 import { prevEl, nextEl } from './helpers/Array'
+import { isEmpty } from './helpers/Object'
 
 class App extends Component {
   // Lifecycle
   constructor(props) {
     super(props);
-    this.state = { active: '', menu: true, hideTitle: false }
+    this.state = { active: '', hideTitle: false }
   }
 
   componentDidMount() {
@@ -45,7 +46,7 @@ class App extends Component {
   _setActive = () => {
     const activeItem = this._parseHash();
     const active = Seed.filter(item => activeItem === item.longName)[0];
-    this.setState({ active: active, menu: !active });
+    this.setState({ active: active });
   }
 
   _setTitle = hide => {
@@ -59,7 +60,7 @@ class App extends Component {
 
   // Render
   render() {
-    const { active = {}, menu, hideTitle } = this.state;
+    const { active = {}, hideTitle } = this.state;
     const { _setHash, _setTitle, _arrowControl } = this;
 
     return (
@@ -69,8 +70,8 @@ class App extends Component {
           <Menu seed={Seed} active={active} onItemClick={_setHash} />
         </div>
         <Links hideMenu={active} linkClick={_setHash} hideTitle={_setTitle} />
-        <Content seed={Seed} active={active} menuOpen={menu} onArrows={_arrowControl} />
-        <Arrows className={`controls ${menu ? 'hide-controls' : ''}`} onClick={_arrowControl} />
+        <Content seed={Seed} active={active} onArrows={_arrowControl} />
+        <Arrows className={`controls ${isEmpty(active) ? 'hide-controls' : ''}`} onClick={_arrowControl} />
         <KeyboardShortcuts onEsc={_setHash} onArrows={_arrowControl} />
       </React.Fragment>
     )
