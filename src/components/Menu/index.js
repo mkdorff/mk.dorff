@@ -23,9 +23,8 @@ export default class Menu extends Component {
     this.setState({ isMobile: isMobile() });
   }
 
-  _handleClick = (e) => {
-    const newActive = this.props.seed.filter(item => item.longName === e.target.id);
-    newActive.length && this.props.onItemClick(newActive[0]);
+  _handleItemClick = (e) => {
+    this.props.onItemClick(e.target.id);
   }
 
   render() {
@@ -37,7 +36,7 @@ export default class Menu extends Component {
         {seed.map((item, idx) => (!item.hideFromMenu &&
           <div 
             className='menu-item'
-            onClick={this._handleClick}
+            onClick={this._handleItemClick}
             id={item.longName}
             key={idx}>
             <div className='item-text' id={item.longName}>

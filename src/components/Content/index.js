@@ -24,7 +24,7 @@ export default class Content extends Component {
 
   // Maybe implement invertbackground later. Also videos.
   render() {
-    const {active, onPrev, onNext} = this.props;
+    const {active, onArrows} = this.props;
     const {longName, homepage, sourceCode, description, images} = active || {};
     
     return (
@@ -43,7 +43,7 @@ export default class Content extends Component {
           <div className='visuals inner'>
             {images && images.map(this._generateImgs)}
             <div className='mobile-arrows-wrapper'>
-              <Arrows className='mobile-arrows' onPrev={onPrev} onNext={onNext}/>
+              <Arrows className='mobile-arrows' onClick={onArrows} />
             </div>
             <div className='bottom-spacer'></div>
           </div>
