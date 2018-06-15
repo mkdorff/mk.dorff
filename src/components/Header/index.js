@@ -1,16 +1,42 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './header.css'
 
-export default function Header({active, menuClosed}) {
-  return (
-    <div className='header'>
-      <div className={`title ${menuClosed ? 'hide' : ''}`}>
-        <div className='hi'>Hi,</div>
-        <div className='im'>I’m Mohonri</div>
+export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.titleRef = React.createRef();
+    this.state = { content: HiImMoho }
+  }
+
+  componentDidUpdate({content: prev}) {
+    const {content} = this.props;
+    const {current: titleRef} = this.titleRef; 
+    if (prev !== content) {
+      titleRef.classList.add('fade-title');
+    } else {
+      titleRef.classList.remove('fade-title');
+      return;
+    }
+
+    setTimeout(() => {
+      this.setState({ content: content || HiImMoho})
+    }, 300)
+  }
+
+  render() {
+    return (
+      <div className='header'>
+        <div className={`title`} ref={this.titleRef}>
+          {this.state.content}
+        </div>
       </div>
-      <div className={`active-title ${menuClosed ? 'show' : ''}`}>
-        {active}
-      </div>
-    </div>
-  )
+    )
+  }
 }
+
+const HiImMoho = (
+  <React.Fragment>
+    <div className='hi'>Hi,</div>
+    <div className='im'>I’m Mohonri</div>
+  </React.Fragment>
+)

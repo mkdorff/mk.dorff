@@ -55,13 +55,13 @@ class App extends Component {
 
   // Render
   render() {
-    const { active, menu } = this.state;
+    const { active = {}, menu } = this.state;
     const { _setHash, _arrowControl } = this;
 
     return (
       <React.Fragment>
         <div className='header-menu'>
-          <Header active={active && active.shortName} menuClosed={!menu} />
+          <Header content={active.shortName} />
           <Menu seed={Seed} showMenu={menu} onItemClick={_setHash} />
         </div>
         <Links showMenuButton={!menu} menuClick={_setHash} aboutClick={_setHash} seed={Seed} />

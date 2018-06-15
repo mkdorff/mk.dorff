@@ -14,21 +14,25 @@
   .title {
     position: absolute;
     font-size: 72px;
-    
-    @include for-mobile { @include untilt; }
-    @include simple-ease-med(bottom, left);
-    @include for-mobile { bottom: 38px; left: 32px; }
+    text-transform: uppercase;
+    @include simple-ease-med(opacity);
     @include for-desktop { bottom: 16px; left: 48px; }
+    @include for-mobile { 
+      @include untilt; 
+      font-size: 54px;
+      bottom: 38px;
+      left: 32px;
+    }
 
     .hi {
-      @include simple-ease-fast(font-size);
+      text-transform: none;
       @include for-mobile { font-size: 54px; }
       @include for-desktop { display: inline; }
     }
 
     .im {
+      text-transform: none;
       padding-left: 16px;
-      @include simple-ease-fast(font-size);
       @include for-desktop { display: inline; }
       @include for-mobile { 
         @include __ML;
@@ -37,28 +41,6 @@
       }
     }
 
-    &.hide {
-      bottom: var(--header-height-calc);
-    }
-  }
-
-  .active-title {
-    text-transform: uppercase;
-    position: absolute;
-    font-size: 72px;
-    bottom: -120px;
-    left: 48px;
-    @include simple-ease-med(bottom, left);
-    @include for-mobile { 
-      @include untilt; 
-      font-size: 54px;
-      left: 32px;
-      bottom: -100px;
-    }
-
-    &.show {
-      @include for-mobile { bottom: 38px; }
-      @include for-desktop { bottom: 16px; }
-    }
+    &.fade-title { opacity: 0; }
   }
 }
